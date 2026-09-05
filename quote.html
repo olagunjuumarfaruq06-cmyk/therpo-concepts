@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Quote | Therpo Concepts</title>
+    <meta name="description" content="Request a quote from Therpo Concepts for graphic design, printing, branding, banners, signboards, billboards and promotional products in Nigeria.">
+
+<meta name="keywords" content="Therpo Concepts quote, printing quote, branding quote, graphic design quote, signboard quote, Osun State Nigeria">
+
+<meta name="author" content="Therpo Concepts">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            color: #222;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            background: #111;
+            padding: 18px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            width: 150px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover,
+        .nav-links .active {
+            color: #ff6a00;
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* HERO */
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+                        url("images/quote-bg.jpg");
+            background-size: cover;
+            background-position: center;
+            padding: 80px 7%;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        /* QUOTE SECTION */
+
+        .quote-section {
+            padding: 70px 7%;
+        }
+
+        .quote-container {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,.08);
+        }
+
+        .quote-container h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+
+        .quote-container .intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 7px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #ff6a00;
+        }
+
+        .form-group textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: #ff6a00;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #e85f00;
+        }
+
+        .form-message {
+            display: none;
+            text-align: center;
+            margin-top: 15px;
+            color: #ff6a00;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 25px 7%;
+        }
+
+        footer span {
+            color: #ff6a00;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+
+            nav {
+                position: relative;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                right: 7%;
+                background: #111;
+                width: 220px;
+                padding: 20px;
+                flex-direction: column;
+                gap: 18px;
+                border-radius: 8px;
+                z-index: 100;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .hero {
+                padding: 60px 7%;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .quote-section {
+                padding: 45px 5%;
+            }
+
+            .quote-container {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="image mhi.jpg" alt="Therpo Concepts Logo">
+        </a>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="quote.html" class="active">Get a Quote</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+        <h1>Request a Quote</h1>
+        <p>Tell us what you need and we'll get back to you.</p>
+    </section>
+
+
+    
+
+    <section class="quote-section">
+
+        <div class="quote-container">
+
+            <h2>Get Your Quote</h2>
+
+            <p class="intro">
+                Fill in the details below and send your request directly to us on WhatsApp.
+            </p>
+
+            <form id="quoteForm">
+
+                <div class="form-group">
+                    <label for="quoteName">Full Name</label>
+                    <input
+                        type="text"
+                        id="quoteName"
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="quotePhone">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="quotePhone"
+                        placeholder="08012345678"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="quoteService">Service Needed</label>
+
+                    <select id="quoteService" required>
+
+                        <option value="">Select a service</option>
+
+                        <option value="Banner Printing">
+                            Banner Printing
+                        </option>
+
+                        <option value="Billboard">
+                            Billboard
+                        </option>
+
+                        <option value="Signboard">
+                            Signboard
+                        </option>
+
+                        <option value="T-Shirt Printing">
+                            T-Shirt Printing
+                        </option>
+
+                        <option value="Cap Branding">
+                            Cap Branding
+                        </option>
+
+                        <option value="Souvenirs">
+                            Souvenirs
+                        </option>
+
+                        <option value="Key Holders">
+                            Key Holders
+                        </option>
+
+                        <option value="Pens">
+                            Branded Pens
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="quoteQuantity">Quantity</label>
+
+                    <input
+                        type="number"
+                        id="quoteQuantity"
+                        placeholder="e.g. 50"
+                        min="1"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="quoteDetails">Project Details</label>
+
+                    <textarea
+                        id="quoteDetails"
+                        placeholder="Describe what you want..."
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="quoteBudget">
+                        Estimated Budget (Optional)
+                    </label>
+
+                    <input
+                        type="text"
+                        id="quoteBudget"
+                        placeholder="e.g. ₦50,000"
+                    >
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    REQUEST QUOTE VIA WHATSAPP →
+                </button>
+
+                <p class="form-message" id="quoteMessage"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+ 
+
+    <footer>
+        <p>
+            © 2026 <span>Therpo Concepts</span>. All Rights Reserved.
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

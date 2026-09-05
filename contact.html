@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Therpo Concepts</title>
+    <meta name="description" content="Contact Therpo Concepts for professional graphic design, printing, branding, banners, signboards and billboard services in Osun State, Nigeria.">
+
+<meta name="keywords" content="Contact Therpo Concepts, graphic design contact, printing contact, branding services Osun State, Nigeria">
+
+<meta name="author" content="Therpo Concepts">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #050505;
+            --dark: #111111;
+            --orange: #f26422;
+            --orange-light: #ff7a35;
+            --white: #ffffff;
+            --light: #f5f5f5;
+            --gray: #777777;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--light);
+            color: var(--black);
+        }
+
+        /* NAVBAR */
+
+        .header {
+            background: var(--black);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            min-height: 85px;
+            padding: 0 8%;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 125px;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin-left: auto;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--orange);
+        }
+
+        .nav-cta {
+            margin-left: 30px;
+            background: var(--orange);
+            color: white;
+            padding: 14px 22px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* HERO */
+
+        .hero {
+            background: var(--black);
+            color: white;
+            padding: 90px 8%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border: 60px solid var(--orange);
+            border-radius: 50%;
+            right: -170px;
+            top: -180px;
+            opacity: 0.12;
+        }
+
+        .hero p {
+            color: var(--orange);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 7vw, 75px);
+            line-height: 1;
+            font-weight: 800;
+        }
+
+        .hero h1 span {
+            color: var(--orange);
+        }
+
+        /* CONTACT SECTION */
+
+        .contact {
+            padding: 90px 8%;
+        }
+
+        .contact-container {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        /* LEFT SIDE */
+
+        .contact-info h2 {
+            font-size: 38px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .contact-info h2 span {
+            color: var(--orange);
+        }
+
+        .contact-intro {
+            color: var(--gray);
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .contact-box {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 28px;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--orange);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .contact-box h3 {
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .contact-box p,
+        .contact-box a {
+            color: var(--gray);
+            font-size: 13px;
+            line-height: 1.6;
+            text-decoration: none;
+        }
+
+        .contact-box a:hover {
+            color: var(--orange);
+        }
+
+        /* FORM */
+
+        .form-card {
+            background: white;
+            padding: 45px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            border-top: 5px solid var(--orange);
+        }
+
+        .form-card h2 {
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .form-card > p {
+            color: var(--gray);
+            font-size: 12px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        label {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            background: #fafafa;
+            font-family: inherit;
+            font-size: 13px;
+            outline: none;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--orange);
+            background: white;
+        }
+
+        textarea {
+            height: 130px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            background: var(--orange);
+            color: white;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: var(--black);
+        }
+
+        .form-message {
+            margin-top: 15px;
+            font-size: 12px;
+            text-align: center;
+            display: none;
+        }
+
+        /* CTA */
+
+        .contact-cta {
+            background: var(--orange);
+            color: white;
+            text-align: center;
+            padding: 70px 8%;
+        }
+
+        .contact-cta h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .contact-cta p {
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--black);
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            background: var(--black);
+            color: white;
+            padding: 65px 8% 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        .footer-brand img {
+            width: 125px;
+            margin-bottom: 15px;
+        }
+
+        .footer p {
+            color: #999;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .footer h4 {
+            color: var(--orange);
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: #999;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .footer-links a:hover {
+            color: var(--orange);
+        }
+
+        .footer-contact a {
+            color: var(--orange);
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #222;
+            margin-top: 45px;
+            padding-top: 18px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            font-size: 10px;
+            color: #555;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .navbar {
+                padding: 0 6%;
+            }
+
+            .logo img {
+                width: 110px;
+            }
+
+            .menu-btn {
+                display: block;
+                margin-left: auto;
+                margin-right: 15px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 85px;
+                left: 0;
+                width: 100%;
+                background: var(--black);
+                padding: 25px 8%;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+
+            .hero {
+                padding: 70px 7%;
+            }
+
+            .contact {
+                padding: 65px 7%;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .contact-info h2 {
+                font-size: 31px;
+            }
+
+            .form-card {
+                padding: 30px 22px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .contact-cta h2 {
+                font-size: 30px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            <img src="image mhi.jpg" alt="Therpo Concepts Logo">
+        </a>
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="services.html">Services</a></li>
+
+            <li><a href="portfolio.html">Portfolio</a></li>
+
+            <li><a href="about.html">About Us</a></li>
+
+            <li><a href="contact.html" class="active">Contact</a></li>
+
+        </ul>
+
+        <a href="quote.html" class="nav-cta">
+            Get a Quote
+        </a>
+
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <p>GET IN TOUCH</p>
+
+    <h1>
+        Let's Talk <span>Business.</span>
+    </h1>
+
+</section>
+
+
+<section class="contact">
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+
+            <h2>
+                Have a project<br>
+                <span>in mind?</span>
+            </h2>
+
+            <p class="contact-intro">
+                Whether you need graphic design, printing, branding,
+                signboards or large-format advertising, we'd love
+                to hear from you.
+            </p>
+
+
+            <div class="contact-box">
+
+                <div class="contact-icon">☎</div>
+
+                <div>
+                    <h3>PHONE</h3>
+
+                    <a href="tel:234903573281">
+                        234903573281
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="contact-box">
+
+                <div class="contact-icon">✆</div>
+
+                <div>
+                    <h3>WHATSAPP</h3>
+                    <a href="tel:234903573281">
+                        234903573281
+                    </a>
+<script src="script.js"></script>
